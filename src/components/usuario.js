@@ -1,7 +1,7 @@
 import React from "react"
 
 export default function Usuario(){
-    const [nome, setNome] = React.useState("catanacomics")
+    const [nome, setNome] = React.useState("Catana")
     const [userImage, setUserImage] = React.useState("assets/img/catanacomics.svg")
 
     function mudarNome(){
@@ -18,9 +18,9 @@ export default function Usuario(){
         <div class="usuario">
         <img src={userImage} onClick={mudarImagem}/>
         <div class="texto">
-          <strong>{nome}</strong>
+          <strong>catanacomics</strong>
           <span>
-            Catana
+            {nome}
             <ion-icon name="pencil" onClick={mudarNome}></ion-icon>
           </span>
         </div>
