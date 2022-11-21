@@ -37,7 +37,7 @@ function Post(props){
       <div class="post">
         <div class="topo">
           <div class="usuario">
-            <img src={props.usuario} />
+            <img src={props.usuario}  />
             {props.nome}
           </div>
           <div class="acoes">
@@ -46,7 +46,7 @@ function Post(props){
         </div>
 
         <div class="conteudo">
-          <img src={props.conteudo} />
+          <img src={props.conteudo} onClick={liked}/>
         </div>
 
         <div class="fundo">
@@ -71,6 +71,7 @@ function Post(props){
       </div>
     )
   }
+  
   return(
   <div class="post">
     <div class="topo">
@@ -84,7 +85,7 @@ function Post(props){
     </div>
 
     <div class="conteudo">
-      <img src="assets/img/dog.svg" />
+      <img src={props.conteudo} onClick={liked} />
     </div>
 
     <div class="fundo">
