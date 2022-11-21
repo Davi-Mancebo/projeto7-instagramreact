@@ -1,17 +1,37 @@
 import React from "react"
 
 export default function Usuario(){
-    const [nome, setNome] = React.useState("Catana")
-    const [userImage, setUserImage] = React.useState("assets/img/catanacomics.svg")
+    const usuario = {nome: "Catana", imagem: "assets/img/catanacomics.svg"}
+
+    return(
+        <User nome={usuario.nome} imagem={usuario.imagem}/>
+    )
+}
+function User(props){
+    const [nome, setNome] = React.useState(props.nome)
+    const [userImage, setUserImage] = React.useState(props.imagem)
 
     function mudarNome(){
       const resposta = prompt("Insira seu novo nome")
-      setNome(resposta)
+      console.log(resposta)
+
+      if(resposta === ""){
+        setNome(nome)
+      }else{
+        setNome(resposta)
+      }
     }
 
-    function mudarImagem(){
+    function mudarImagem(){    
       const resposta = prompt("Insira a URL de sua nova foto de perfil!")
-      setUserImage(resposta)
+      console.log(resposta)
+
+      if(resposta === ""){
+        setUserImage(userImage)
+      }
+      else{
+        setUserImage(resposta)
+      }
     }
 
     return(
